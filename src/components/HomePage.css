@@ -1,0 +1,38 @@
+/* src/pages/HomePage.css */
+.home-page {
+    text-align: center;
+  }
+  
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+  
+  .promotions {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+  }
+  
+  .promotion img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .featured-products {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+  }
+  
+  .product {
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  

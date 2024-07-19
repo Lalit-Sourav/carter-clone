@@ -1,0 +1,17 @@
+/* src/components/Wishlist.css */
+.wishlist {
+    padding: 2rem;
+  }
+  
+  .wishlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .wishlist-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  

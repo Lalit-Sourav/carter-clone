@@ -1,0 +1,17 @@
+/* src/components/Cart.css */
+.cart {
+    padding: 2rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  

@@ -1,0 +1,20 @@
+
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "price": 10.00,
+        "image": "/images/product1.jpg",
+        "category": "Baby"
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "price": 15.00,
+        "image": "/images/product2.jpg",
+        "category": "Baby"
+      }
+    ]
+  }
+  
