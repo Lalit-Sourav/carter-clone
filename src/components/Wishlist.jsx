@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { StoreContext } from '../context/StroreContext';
 import './Wishlist.css';
+import { Navbar } from '@nextui-org/react';
 
 const Wishlist = () => {
   const { wishlist, removeFromWishlist } = useContext(StoreContext);
 
   return (
     <div className="wishlist">
+      <Navbar></Navbar>
       <h2>Wishlist</h2>
       {wishlist.length === 0 ? (
         <p>Your wishlist is empty</p>

@@ -9,6 +9,7 @@ const StoreContextProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
+    console.log("added")
   };
 
   const removeFromCart = (id) => {

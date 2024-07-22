@@ -1,5 +1,6 @@
-/* src/components/Cart.css */
-.cart {
+
+  /* src/components/Cart.css */
+  .cart {
     padding: 2rem;
   }
   
@@ -7,6 +8,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 1px solid;
+    width: 462px;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: white;
   }
   
   .cart-item img {
@@ -15,3 +22,49 @@
     margin-right: 1rem;
   }
   
+  .card{
+    display: flex;
+    border: 1px solid;
+    height: 100px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .logocard{
+    width: 95px;
+    margin: 0px;
+  }
+  
+  .heading{
+    display: flex;
+    margin: 1px;
+    height: 100%;
+    position: relative;
+    top: 34%;
+    height: 65px;
+  }
+  
+  .logocard{
+    background-image: url(card.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 171px;
+    height: 96px
+  }
+  
+  .btn09{
+    position: relative;
+    top: 35%;
+    right: 0%;
+    height: 37px;
+  }
+  
+  .applynow{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  } 
+  
+  .applynow:hover{
+    box-shadow: 0px 2px 10px 5px rgb(182, 220, 235) ;
+  }

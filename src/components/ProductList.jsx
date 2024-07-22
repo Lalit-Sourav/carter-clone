@@ -1,21 +1,25 @@
-// src/components/ProductList.js
 import React, { useEffect, useState, useContext } from 'react';
-import './ProductList.css';
+import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../context/StroreContext';
+import './ProductList.css';
+
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortType, setSortType] = useState('');
   const { addToCart, addToWishlist } = useContext(StoreContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data);
-        setFilteredProducts(data);
-      });
+    const fetchProducts = async () => {
+      const response = await fetch('http://localhost:3000/products');
+      const data = await response.json();
+      setProducts(data);
+      setFilteredProducts(data);
+    };
+
+    fetchProducts();
   }, []);
 
   const handleSearch = (e) => {
@@ -33,8 +37,12 @@ const ProductList = () => {
         return a.price - b.price;
       } else if (e.target.value === 'price-desc') {
         return b.price - a.price;
-      } else {
+      } else if (e.target.value === 'name-asc') {
         return a.name.localeCompare(b.name);
+      } else if (e.target.value === 'name-desc') {
+        return b.name.localeCompare(a.name);
+      } else {
+        return 0;
       }
     });
     setFilteredProducts(sorted);
@@ -43,6 +51,10 @@ const ProductList = () => {
   const handleFilter = (category) => {
     const filtered = products.filter(product => product.category === category);
     setFilteredProducts(filtered);
+  };
+
+  const handleProductClick = (id) => {
+    navigate(`/products/${id}`);
   };
 
   return (
@@ -65,12 +77,12 @@ const ProductList = () => {
       <button onClick={() => handleFilter('Toddler')} className="filter-button">Toddler</button>
       <div className="products">
         {filteredProducts.map(product => (
-          <div className="product" key={product.id}>
+          <div className="product" key={product.id} onClick={() => handleProductClick(product.id)}>
             <img src={product.image} alt={product.name} />
             <p>{product.name}</p>
             <p>${product.price.toFixed(2)}</p>
-            <button onClick={() => addToCart(product)} className="add-to-cart">Add to Cart</button>
-            <button onClick={() => addToWishlist(product)} className="add-to-wishlist">Add to Wishlist</button>
+            <button onClick={(e) => {e.stopPropagation(); addToCart(product)}} className="add-to-cart">Add to Cart</button>
+            <button onClick={(e) => {e.stopPropagation(); addToWishlist(product)}} className="add-to-wishlist">Add to Wishlist</button>
           </div>
         ))}
       </div>

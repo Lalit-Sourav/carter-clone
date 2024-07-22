@@ -1,0 +1,35 @@
+.log-in-form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    max-width: 100vw;
+    padding: 30px 7%;
+    min-height: 90vh;
+}
+h2{
+    text-align: center;
+    color: #179dca;
+    font-size: 40px;
+}
+label{
+    font-size: 25px;
+    color: #898888;
+}
+.input{
+    height: 40px;
+}
+input:focus{
+    outline: none;
+    border: 1px solid #179dca;
+    border-radius: 10px;
+}
+.button{
+    width:100% ;
+    height: 45px;
+    padding: 7px auto;
+    margin: 20px 0px;
+}
+#signup{
+    background-color: #007bff;
+    color: white;
+}

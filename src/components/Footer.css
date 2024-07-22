@@ -1,8 +1,152 @@
-/* src/components/Footer.css */
 .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f1f1f1;
-    border-top: 1px solid #ddd;
+
+  background-color: #f8f9fa;
+  padding: 20px 10%;
+
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color:  rgb(39, 55, 79);
+}
+.footer-column ul li:hover{
+  text-decoration: underline;
+  color: #007bff;
+}
+.input-group{
+  display: flex;
+
+  /* height: 40px; */
+
+}
+
+.footer-column input {
+  width: calc(100% - 60px);
+  padding: 5px;
+  margin-bottom: 10px;
+  height: 100%;
+  border: none;
+}
+
+.footer-column button {
+  padding: 5px 10px;
+  height: 100%;
+  border: none;
+  width: 40px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  transform: scale(1.5);
+  width:75%;
+  margin-top: 20px;
+}
+.social-icons path{
+  color: #999898;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  gap: 5px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-bottom ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.footer-bottom ul li {
+  margin-right: 10px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: rgb(39, 55, 79);
+  cursor: pointer;
+
+}
+.footer-bottom ul li:hover{
+  color: #007bff;
+}
+
+.footer-trending {
+  padding: 10px 0;
+}
+
+.footer-trending p {
+  font-weight: bold;
+}
+
+.footer-trending ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-trending ul li {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.footer-disclaimer {
+  padding: 10px 0;
+}
+
+.footer-disclaimer p {
+  margin: 15px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+@media screen and (max-width:700px){
+
+  .footer-columns {
+    flex-direction: column;
   }
-  
+  .footer-bottom{
+    justify-content: center;
+  }
+  .footer-bottom ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-bottom ul li{
+    font-size: 10px;
+
+  }
+}

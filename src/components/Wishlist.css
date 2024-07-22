@@ -1,17 +1,21 @@
 /* src/components/Wishlist.css */
 .wishlist {
-    padding: 2rem;
-  }
-  
-  .wishlist-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .wishlist-item img {
-    width: 100px;
-    height: auto;
-    margin-right: 1rem;
-  }
-  
+  padding: 2rem;
+}
+
+.wishlist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 2px solid;
+  width: 462px;
+  justify-content: space-around;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.wishlist-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 1rem;
+}
